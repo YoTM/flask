@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from flask import render_template, flash, redirect, url_for, request
 from app import app
@@ -10,7 +11,6 @@ from werkzeug.urls import url_parse
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': 'Эльдар Рязанов'}
     posts = [
         {
             'author': {'username': 'John'},
@@ -19,18 +19,6 @@ def index():
         {
             'author': {'username': 'Susan'},
             'body': 'The Avengers movie was so cool!'
-        },
-        {
-            'author': {'username': 'Иполит'},
-            'body': 'Какая гадость эта ваша заливная рыба!!'
-        },
-        {
-            'author': {'username': 'Иполит1'},
-            'body': 'Какая гадость эта ваша заливная рыба!!'
-        },
-        {
-            'author': {'username': 'Иполит2'},
-            'body': 'Какая гадость эта ваша заливная рыба!!'
         }
     ]
     return render_template('index.html', title='Home', posts=posts)
@@ -49,7 +37,7 @@ def login():
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('index')
-        return redirect(url_for(next_page))
+        return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
 @app.route('/logout')
