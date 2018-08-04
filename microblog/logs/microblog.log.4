@@ -1,31 +1,4 @@
-2018-07-14 22:46:38,715 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:47:07,258 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:47:47,191 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:48:01,536 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:48:32,806 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:50:31,568 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:50:44,377 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:52:49,170 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:56:16,322 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:56:26,436 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:56:37,789 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:58:55,948 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:59:15,565 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:59:44,833 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-14 22:59:54,938 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 11:37:53,363 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 11:40:22,723 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 12:10:18,815 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 12:10:26,237 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 12:11:51,750 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 12:12:52,306 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 12:52:37,042 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 12:52:57,310 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-15 12:59:31,640 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-17 05:57:13,987 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-17 06:18:58,837 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-17 06:28:16,393 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:52]
-2018-07-17 06:28:20,441 ERROR: Exception on /explore [GET] [in /home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
+2018-07-17 06:30:24,952 ERROR: Exception on /index [GET] [in /home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/tim/PycharmProjects/flask/microblog/app/routes.py", line 41, in explore
-    return render_template('index.html', title='Explore', posts=posts)
+  File "/home/tim/PycharmProjects/flask/microblog/app/routes.py", line 34, in index
+    return render_template('index.html', title='Home', form=form, posts=posts)
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 117, in _render
@@ -64,7 +37,7 @@ Traceback (most recent call last):
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'user' is undefined
-2018-07-17 06:28:29,227 ERROR: Exception on /index [GET] [in /home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
+2018-07-17 06:30:33,011 ERROR: Exception on /index [GET] [in /home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -82,6 +55,45 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
   File "/home/tim/PycharmProjects/flask/microblog/app/routes.py", line 34, in index
     return render_template('index.html', title='Home', form=form, posts=posts)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/tim/PycharmProjects/flask/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/tim/PycharmProjects/flask/microblog/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/tim/PycharmProjects/flask/microblog/app/templates/index.html", line 23, in block "content"
+    {% include '_post.html' %}
+  File "/home/tim/PycharmProjects/flask/microblog/app/templates/_post.html", line 4, in top-level template code
+    <img src="{{ user.avatar(36) }}">
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2018-07-17 06:30:52,626 ERROR: Exception on /explore [GET] [in /home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/tim/PycharmProjects/flask/microblog/app/routes.py", line 41, in explore
+    return render_template('index.html', title='Explore', posts=posts)
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
   File "/home/tim/PycharmProjects/flask/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 117, in _render
