@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 from flask_mail import Message
-from app import mail
+from flask import render_template
+from app import app, mail
 from threading import Thread
 
 
