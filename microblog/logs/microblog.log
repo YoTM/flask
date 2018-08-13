@@ -77,3 +77,5 @@ jinja2.exceptions.TemplateNotFound: email/reset_password.txt
 2018-08-12 15:05:11,350 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:54]
 2018-08-12 15:20:18,091 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:54]
 2018-08-12 15:32:01,353 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:54]
+2018-08-12 16:15:08,256 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:58]
+2018-08-13 21:12:24,624 INFO: Microblog startup [in /home/tim/PycharmProjects/flask/microblog/app/__init__.py:58]

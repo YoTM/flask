@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import logging
+import os
 from logging.handlers import SMTPHandler
 from flask import Flask
 from config import Config
@@ -9,7 +10,8 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from logging.handlers import RotatingFileHandler
 from flask_mail import Mail
-import os
+from flask_bootstrap import Bootstrap
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -21,6 +23,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 mail = Mail(app)
+
+bootstrap = Bootstrap(app)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
